@@ -1,0 +1,25 @@
+{
+    "name": "気になるボタン自動押下ツール for Green",
+    "description": "転職サイト Green にて、求人ページに指定したキーワードが含まれている場合、そのページの気になるボタンを自動押下します。",
+    "version": "0.1.0",
+    "manifest_version": 3,
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [
+        {
+            "matches": ["https://www.green-japan.com/*"],
+            "js": ["js/contents.js"]
+        }
+    ],
+    "options_page": "settings.html",
+    "action": {
+        "default_popup": "popup.html"
+    },
+    "permissions": ["storage"],
+    "icons": {
+        "16": "images/heart-16.png",
+        "48": "images/heart-48.png",
+        "128": "images/heart-128.png"
+    }
+}

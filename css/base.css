@@ -1,0 +1,63 @@
+/* popup */
+
+.popup {
+    width: 20rem;
+    font-size: 1rem;
+    margin: auto 0;
+}
+
+.popup .header__title {
+    text-align: center;
+    padding-bottom: 0.5rem;
+    border-bottom: solid;
+}
+
+.popup .main {
+    display: flex;
+    padding-bottom: 1.5rem;
+}
+
+.popup .status {
+    margin-left: 8rem;
+    margin-right: 4rem;
+}
+
+.popup .config {
+    padding-top: 0.3rem;
+}
+
+.popup i:hover {
+    cursor: pointer;
+}
+
+/* settings */
+
+.settings {
+    white-space: nowrap;
+    font-size: 1rem;
+    margin: 3rem 15rem;
+}
+
+.settings .header__title {
+    padding-bottom: 0.5rem;
+    border-bottom: solid grey;
+}
+
+.settings .main {
+    margin-top: 3rem;
+}
+
+.settings .position input,
+.settings .searchwords input {
+    margin-bottom: 1.5rem;
+    width: 8rem;
+    font-size: 1rem;
+}
+
+.settings .searchwords__wrapper {
+    display: flex;
+}
+
+.settings .status {
+    margin-top: 6rem;
+}

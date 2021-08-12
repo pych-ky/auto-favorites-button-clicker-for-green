@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Settings</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/toggle-switchy/toggle-switchy.css">
+    <script src="js/lib/vue.min.js" defer></script>
+    <script src="js/common.js" defer></script>
+    <script src="js/settings.js" defer></script>
+</head>
+<body class="settings">
+    <div id="settings">
+        <div class="header">
+            <h1 class="header__title">設定</h1>
+        </div>
+        <div class="main">
+            <div class="position">
+                <p>開始位置:</p>
+                <input type="number" min="0" v-model="startPage" @input="saveSetting"><span>&nbsp;ページ</span>
+                <p>停止位置:</p>
+                <input type="number" min="0" v-model="stopPage" @input="saveSetting"><span>&nbsp;ページ</span>
+            </div>
+            <div class="searchwords">
+                <p>検索キーワード:</p>
+                <div class="searchwords__wrapper">
+                    <div v-for="n in 5" :key="n">
+                        <input type="text" v-model="searchWords[n]" @keyup="saveSetting">
+                    </div>
+                </div>
+            </div>
+            <div class="status">
+                <status-toggle></status-toggle>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
